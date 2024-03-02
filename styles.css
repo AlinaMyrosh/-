@@ -75,7 +75,7 @@ img {
 @media screen and (min-width: 768px) {
   .hero-container {
     width: 768px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
     padding: 122px 32px 0;
   }
 
