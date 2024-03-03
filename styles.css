@@ -1,5 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   display: block;
+}
+
+.body {
+  font-family: "Inter Tight";
 }
 
 h1,
@@ -18,12 +28,34 @@ img {
   height: auto;
 }
 
+.container {
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 100px;
+  }
+}
+
 .hero {
   background-color: #576f35;
+  padding-top: 100px;
+  color: #fbfbfb;
 }
 
 .hero-container {
-  padding: 100px 20px 0;
+  padding: 0 20px;
   max-width: 375px;
   margin: 0 auto 40px;
 }
@@ -73,10 +105,14 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 122px;
+  }
+
   .hero-container {
     max-width: 768px;
     margin: 0 auto 50px;
-    padding: 122px 32px 0;
+    padding: 0 32px;
   }
 
   .hero-title {
@@ -124,17 +160,18 @@ img {
     display: flex;
     gap: 28px;
     margin: 0 auto;
+    padding: 0 0 0 100px;
   }
 
   .hero-container {
-    width: 602px;
-    /* margin-right: 0;
-    padding-right: 0; */
-    padding-top: 238px 0 0 100px;
+    max-width: 602px;
+    margin: 0 0 0 auto;
+    padding: 238px 0 50px;
   }
 
   .hero-title {
     margin-bottom: 128px;
+    width: 502px;
   }
 
   .hero-text {
@@ -169,4 +206,93 @@ img {
       background-size: 650px 800px;
     }
   }
+}
+
+.discount {
+  background: #fbfbfb;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.discount-text {
+  color: #141414;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.discount-text::before {
+  display: block;
+  width: 355px;
+  height: 102px;
+  background-color: #576f35;
+  border-radius: 12px;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 1px;
+  z-index: -1;
+}
+
+.discount-accent {
+  color: #fbfbfb;
+}
+
+@media screen and (min-width: 768px) {
+  .discount {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .discount-text {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 1.09;
+  }
+
+  .discount-text::before {
+    width: 736px;
+    height: 86px;
+    left: -16px;
+    top: -4px;
+  }
+
+  .discount-accent {
+    color: #fbfbfb;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .discount {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .discount-text {
+    font-size: 76px;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+  }
+
+  .discount-text::before {
+    width: 808px;
+    left: -13px;
+    top: 4px;
+  }
+
+  .discount-accent {
+    display: inline;
+  }
+}
+
+@font-face {
+  font-family: "StudioPro";
+  src: url("./fonts/studio-pro-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
