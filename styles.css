@@ -8,8 +8,9 @@
   display: block;
 }
 
-.body {
+body {
   font-family: "Inter Tight";
+  color: #fbfbfb;
 }
 
 h1,
@@ -91,7 +92,7 @@ img {
       rgba(20, 20, 20, 0.2) 0%,
       rgba(20, 20, 20, 0.2) 100%
     ),
-    url(./images/hero-mob.jpg),
+    url(./images/hero.jpg),
     lightgray -21.701px -17.796px / 115.12% 121.468% no-repeat;
   height: 370px;
   background-size: cover;
@@ -135,15 +136,17 @@ img {
 @media (min-width: 1280px) {
   .hero {
     display: flex;
+    /* he: 800px; */
+    margin-left: auto;
   }
 
   .hero-content {
     padding-top: 238px;
     position: relative;
+    width: calc(100vw - (((100vw - 1280px) / 2) + 650px + 100px));
   }
 
   .hero-body {
-    padding-bottom: 50px;
   }
 
   .hero-title {
@@ -163,13 +166,15 @@ img {
       ),
       url(./images/hero.jpg),
       lightgray -21.701px -17.796px / 115.12% 121.468% no-repeat;
+    background-repeat: no-repeat;
     height: 800px;
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    background-size: auto;
+    background-position: left;
     position: absolute;
-    top: 0;
+    top: 18px;
     left: 630px;
+    width: calc(100vw - (((100vw - 1280px) / 2) + 630px + 100px));
   }
 }
 
@@ -364,7 +369,7 @@ img {
   }
 } */
 
-/* .discount {
+.discount {
   background: #fbfbfb;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -390,7 +395,7 @@ img {
   content: "";
   position: absolute;
   left: -10px;
-  top: 1px;
+  top: 0;
   z-index: -1;
 }
 
@@ -414,7 +419,7 @@ img {
     width: 736px;
     height: 86px;
     left: -16px;
-    top: -4px;
+    top: -8px;
   }
 
   .discount-accent {
@@ -438,7 +443,7 @@ img {
   .discount-text::before {
     width: 808px;
     left: -13px;
-    top: 4px;
+    top: 0px;
   }
 
   .discount-accent {
@@ -451,4 +456,4 @@ img {
   src: url("./fonts/studio-pro-regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
-} */
+}
